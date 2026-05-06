@@ -1,7 +1,4 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --buildsystem=cmake --sourcedirectory=LCCV
-
-override_dh_auto_configure:
-	dh_auto_configure --sourcedirectory=LCCV --
+	dh $@ --sourcedirectory=LCCV
