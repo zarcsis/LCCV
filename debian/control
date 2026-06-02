@@ -1,17 +1,19 @@
 Source: liblccv
 Priority: optional
 Maintainer: special-delivery <development@special-delivery.org>
-Build-Depends: debhelper-compat (= 13),
-               cmake,
-               libcamera-dev,
-               libopencv-dev
+Build-Depends:
+ debhelper-compat (= 13),
+ libcamera-dev,
+ libopencv-dev,
 Standards-Version: 4.6.0
 Section: libs
+X-Style: black
 
 Package: liblccv
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: LCCV (libcamera bindings for OpenCV) (runtime)
  LCCV (libcamera bindings for OpenCV) is a small wrapper library that provides access to the Raspberry Pi camera in OpenCV.
  This package provides the shared libraries.
@@ -19,8 +21,9 @@ Description: LCCV (libcamera bindings for OpenCV) (runtime)
 Package: liblccv-dev
 Architecture: any
 Section: libdevel
-Depends: liblccv (= ${binary:Version}),
-         ${misc:Depends}
+Depends:
+ liblccv (= ${binary:Version}),
+ ${misc:Depends},
 Description: LCCV (libcamera bindings for OpenCV) (development)
  LCCV (libcamera bindings for OpenCV) is a small wrapper library that provides access to the Raspberry Pi camera in OpenCV.
  This package provides the development headers and cmake config files.
@@ -28,7 +31,8 @@ Description: LCCV (libcamera bindings for OpenCV) (development)
 Package: liblccv-doc
 Architecture: all
 Section: doc
-Depends: ${misc:Depends}
+Depends:
+ ${misc:Depends},
 Description: LCCV (libcamera bindings for OpenCV) (documentation)
  LCCV (libcamera bindings for OpenCV) is a small wrapper library that provides access to the Raspberry Pi camera in OpenCV.
  This package provides the documentation.
